@@ -7,10 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <h2>Hello !</h2>
-    <h3>Qweerty</h3>
-    <h4>Пароль</h4>
-    <script src="/script.js"></script>
+    <div class="wrapper">
+        <button class="btn">Click</button>
+    </div>
+
+    <script>
+        const button = document.querySelector('.btn')
+        
+        button.addEventListener('click', function() {
+            console.log('click')
+        })
+    </script>
 </body>
 </html>
