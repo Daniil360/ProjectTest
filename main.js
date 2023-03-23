@@ -86,3 +86,5 @@ if(hamburger3 && cola3 || fries3 === 3 && nuggets3) {
 }
 
 console.log(hamburger3)
+
+console.log()
