@@ -15,7 +15,11 @@ P.S. Функции вызывать не обязательно*/
 
 // Код возьмите из предыдущего домашнего задания
 
-const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+let numberOfFilms;
+
+function start() {
+    const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+}
 
 const personalMovieDB = {
     count: numberOfFilms,
