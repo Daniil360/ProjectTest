@@ -1,20 +1,78 @@
-
-function calculateVolumeAndArea(length) {
-    if (typeof (length) !== 'number' || length < 0 || !Number.isInteger(length)) {
-        return "При вычислении произошла ошибка";
+//задачи из курса
+function getTimeFromMinutes(minutesTotal) {
+    if (typeof(minutesTotal) !== 'number' || minutesTotal < 0 || !Number.isInteger(minutesTotal)) {
+        return 'Ошибка, проверьте данные';
     }
 
-    let volume = 0,
-        area = 0;
+    const hours = Math.floor(minutesTotal / 60);
+    const minutes = minutesTotal % 60;
+    
+    let hoursStr = '';
 
-    volume = length * length * length;
-    // length ** 3 - это тоже самое, что и выше или варианты через цикл.
-    // ** - это оператор степени, напоминаю. Но онлайн редактор его не принимает =/
-    area = 6 * (length * length);
+    switch (hours) {
+        case 0:
+            hoursStr = 'часов';
+            break;
+        case 1:
+            hoursStr = 'час';
+            break;
+        case 2:
+        case 3:
+        case 4:
+            hoursStr = 'часа';
+            break;
+        default:
+            hoursStr = 'часов';
+    }
 
-    return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+    return `Это ${hours} ${hoursStr} и ${minutes} минут`;
 }
 
-console.log(calculateVolumeAndArea());
+console.log(getTimeFromMinutes(-150));
+
+
+function findMaxNumber(a, b, c, d) {
+    if (typeof(a) !== 'number' ||
+        typeof(b) !== 'number' || 
+        typeof(c) !== 'number' || 
+        typeof(d) !== 'number' ) {
+            return 0;
+        } else {
+            return Math.max(a, b, c, d);
+        }
+    
+}
+
+console.log(findMaxNumber(1, 5, 6.6, 11));
+console.log(findMaxNumber(1, 5, '6', '10'));
+
+
+
+
+function fib(num) {
+    if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+        return "";
+    }
+
+    let result = '';
+    let first = 0;
+    let second = 1;
+
+    for (let i = 0; i < num; i++) {
+        if (i + 1 === num) {
+            result += `${first}`;
+        } else {
+            result += `${first} `; 
+        }
+
+        let third = first + second;
+        first = second;
+        second = third;
+    }
+
+    return result;
+}
+
+console.log(fib(7));
 
 
