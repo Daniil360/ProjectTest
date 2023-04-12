@@ -1,17 +1,19 @@
 "use strict";
 
-let a = 5,
-    b = a;
+// let a = 5,
+//     b = a;
 
-b = b + 5;
+// b = b + 5;
 
-console.log(b);
-console.log(a);
+// console.log(b);
+// console.log(a);
 
-const obj = {
-    a: 5,
-    b: 1
-};
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+
+
 
 // const copy1 = obj; //передает ссылку на уже существующий обьект
 
@@ -38,3 +40,27 @@ function copy(mainObj) { //Эта функция будет заниматься
 
     return objCopy;
 }
+
+const numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4
+    }
+};
+
+const newNumbers = copy(numbers);
+
+newNumbers.a = 10;
+newNumbers.c.x = 10;
+
+console.log(newNumbers);
+console.log(numbers);
+
+const add = {
+    d: 17,
+    e: 20
+};
+
+console.log(Object.assign(numbers, add));
