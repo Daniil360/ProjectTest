@@ -63,4 +63,44 @@ const add = {
     e: 20
 };
 
-console.log(Object.assign(numbers, add));
+const clone = Object.assign({}, add); 
+
+clone.d = 20;
+
+// console.log(add);
+// console.log(clone);
+
+const oldArray = ['a','b','c'];
+const newArray = oldArray.slice();
+
+newArray[1] = "aaaaadad";
+console.log(newArray);
+console.log(oldArray);
+
+const video = ['youtube', 'vimeo', 'rutube'],
+    blogs = ['wordpress', 'livejournal', 'blogger'],
+    internet = [...video, ...blogs, 'vk', 'facebook'];
+
+console.log(internet);  
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+const num = [2, 5, 7];
+
+log(...num);
+
+
+const array = ["a", "b"];
+
+const newAarraya = [...array];
+
+const q = {
+    one: 1,
+    two: 2
+};
+
+const newObj = {...q};
