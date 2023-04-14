@@ -137,4 +137,3 @@ function availableCurr(arr, missingCurr) {
 
 availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY')
 
-const = [];
