@@ -14,3 +14,13 @@ let square = function(x) {
 };
 
 console.log(square(plus(y)));
+
+const plus1 = x => x + 1;
+const square1 = x => x * x;
+
+console.log(plus1(y))
+
+console.log(square1(plus(y)))
+
+
+console.log(plus)
