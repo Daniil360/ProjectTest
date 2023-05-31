@@ -1,18 +1,24 @@
-function f8(a) {
-    try {
-        if(a.w==1) {return a.w }
-        return 888
-    } catch (error) {
-        return "Ошибка. Нет А"
-    }
+function f2(a,b,c) {
+
 }
 
-console.log(f8({w:22}))
 
-function S() {
-    return "Автомобиль"
+function sum() {
+    const x = 5;
+    const y = 6;
+    console.log(x + y);
 }
 
-function N() {
-    return 2021
+
+sum();
+
+
+let x = 55;
+let y = 66;
+
+function sum2() {
+
+    console.log(x + y);
 }
+
+sum2();
