@@ -4,7 +4,7 @@ function f1(a,b,c) {
 
 
 
-sum3(1000, 2000);
+// sum3(1000, 2000);
 
 
 function sum() {
@@ -48,3 +48,5 @@ let z = 77;
 
 sum3(z,10);
 sum3(z,z*2);
+sum3(2,3,4,5,6);
+sum3(6);
