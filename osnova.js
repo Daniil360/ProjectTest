@@ -35,7 +35,7 @@ sum2();
 //аргументы
 //формальные аргументы
 
-function sum3(x1, y1) {
+function sum3(x1=100, y1=100) {
     console.log(x1 + y1);
 }
 
@@ -50,3 +50,4 @@ sum3(z,10);
 sum3(z,z*2);
 sum3(2,3,4,5,6);
 sum3(6);
+sum3();
