@@ -67,28 +67,44 @@ showSum2(out1, 70 , 6);
 
 
 
-function showSum3() {
+function showSum3(x, y, elem = '.out-1') {
     console.log(arguments);
-    document.querySelector(elem).textContent = arguments[0] + 
-    arguments[1];
-
+    document.querySelector(elem).textContent = x + y;
 }
 
 showSum3(10, 15, ".out-2");
 
 function showSumAll() {
     console.log(arguments);
-    let sum = 0;
-    for (let i = 0; i < arguments.length; i++) {
-        sum += argumens[i];
-    }
+    // let sum = 0;
+    // for (let i = 0; i < arguments.length; i++) {
+    //     sum += argumens[i];
+    // }
+    let sum = Array.from(arguments).reduce((accum, item) => accum+= item );
     console.log(sum);
 }
 
 
-showSumAll(4, 5, 6, '.out-2');
+showSumAll(4, 5, 6, 20 );
 
-
-function showSumAll() {
-    console.log(arguments);
+function showSumAll2(...args) {
+    console.log(args);
+    let sum = args.reduce((accum, item) => accum+= item );
+    console.log(sum);
 }
+
+
+showSumAll2(4, 5, 6, 20, 11);
+
+//функция как аргумент 
+
+function showAll(res) {
+    document.querySelector('.out-1').innerHTML = `<b>${res}</b>`;
+}
+
+
+function showSumAll3(drawFunction , ...num) {
+    drawFunction(num);
+}
+
+showSumAll3(showAll , 68,55,45);
