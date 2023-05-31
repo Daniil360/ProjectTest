@@ -11,6 +11,7 @@ function sum() {
 
 
 sum();
+sum2();
 
 
 let x = 55;
@@ -22,3 +23,8 @@ function sum2() {
 }
 
 sum2();
+
+x = 100;
+y = 200;
+sum2();
+
