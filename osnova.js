@@ -1,6 +1,10 @@
-function f2(a,b,c) {
+function f1(a,b,c) {
 
 }
+
+
+
+sum3(1000, 2000);
 
 
 function sum() {
@@ -11,7 +15,7 @@ function sum() {
 
 
 sum();
-sum2();
+
 
 
 let x = 55;
@@ -38,4 +42,9 @@ function sum3(x1, y1) {
 
 
 sum3(44, 11);
+sum3(101,200);
 
+let z = 77;
+
+sum3(z,10);
+sum3(z,z*2);
