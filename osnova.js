@@ -108,3 +108,5 @@ function showSumAll3(drawFunction , ...num) {
 }
 
 showSumAll3(showAll , 68,55,45);
+
+
