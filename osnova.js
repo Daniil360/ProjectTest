@@ -110,3 +110,9 @@ function showSumAll3(drawFunction , ...num) {
 showSumAll3(showAll , 68,55,45);
 
 
+function f1() {
+    const x = 5;
+    const y = 6;
+    console.log(x+y);
+}
+
